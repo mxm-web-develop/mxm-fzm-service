@@ -1,0 +1,30 @@
+/*  tsconfig.json */
+{
+  "compilerOptions": {
+    /* 基础配置 */
+    "target": "esnext",
+    "module": "CommonJS",
+    "rootDir": "./src",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "removeComments": false,
+    "declaration": true,
+    "sourceMap": true,
+
+    /* 强类型检查配置 */
+    "strict": true,
+    "noImplicitAny": false,
+
+    /* 模块分析配置 */
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src"
+  ]
+}
