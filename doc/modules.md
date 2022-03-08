@@ -1,4 +1,4 @@
-[mxm-fzm-service](README.md) / Exports
+[mxm-fzm-service](../README.md) / Exports
 
 # mxm-fzm-service
 
