@@ -1,33 +1,48 @@
-import path from 'path'
-import { RollupOptions } from 'rollup'
+
 import rollupTypescript from 'rollup-plugin-typescript2'
-import babel from 'rollup-plugin-babel'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import { terser } from "rollup-plugin-terser";
-import { DEFAULT_EXTENSIONS } from '@babel/core'
+
 import pkg from './package.json'
+
+
+const extensions = [".ts", ".js"]
 
 function createEntry(options){
   const config ={ 
-    input:['./src/components/index.ts'],
+    input:['./src/index.ts'],
     output:{
         file:options.file,
         name:options.name,
-        format:options.format,
+        format:options.format
     },
+    external:[
+        'axios',
+        'mxm-usrstorage'
+    ],
     plugins:[
-        resolve(),
+        resolve({
+            extensions
+        }),
         commonjs(),
+        
         rollupTypescript({
             tsconfigOverride:{
                 compilerOptions:{
-                    declaration:options.format === 'es'
+                    removeComments: true,
+                    declaration:true
+                    //options.format === 'es'
                 },
                 // include: ["src/components/**/*.vue"],
-                // exclude: ["node_modules", "**/*.stories.ts"]
+                exclude: ["node_modules"]
             }
         }),
         terser()
   ]}
+  return config
 }
+
+export default [
+    createEntry({file:pkg.main,format:'es'})
+]

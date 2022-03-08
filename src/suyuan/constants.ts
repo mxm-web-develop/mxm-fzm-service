@@ -1,0 +1,19 @@
+export default {
+    user:{
+        login:'/api/user/login',
+        isSetPwd:'/api/user/isSetPwd',
+        keyAdd:'/api/appKey/add',
+        keyDelete:'/api/appKey/delete',
+        keyList:'/api/appKey/list',
+        register:'/api/user/register',
+        send:'/api/user/send',
+        sendEmail:'/api/user/sendEmail',
+        sendSms:'/api/user/sendSms',
+        setPhone:'/api/user/setPhone',
+        setPhoneCode:'/api/user/setPhoneCode',
+        setPwd:'/api/user/setPwd',
+        setPwdCode:'/api/user/setPwdCode',
+        user:'api/user',
+        add:'/api/users/add'
+    }
+}
