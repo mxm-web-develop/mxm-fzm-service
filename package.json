@@ -2,15 +2,17 @@
   "name": "mxm-fzm-service",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doc:gen":"",
+    "build": "yarn rollup -c"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.26.0",
-    "typescript": "^4.5.5"
+    "mxm-usrstorage": "^1.0.2"
   },
   "devDependencies": {
     "rollup": "^2.68.0",
@@ -20,6 +22,9 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
+    "typedoc": "^0.22.13",
+    "typedoc-plugin-markdown": "^3.11.14",
+    "typescript": "^4.5.5",
     "vuepress": "^1.9.7"
   }
 }
