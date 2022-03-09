@@ -1,7 +1,7 @@
-// import FZMAPI from "./index";
+import FZMAPI from "./index";
 
-// const api = new FZMAPI("http://121.37.141.165:46790").Suyuan.userModule();
-
+const api = new FZMAPI("http://121.37.141.165:46790")
+// api.userModule.login()
 //  api.keyAdd()
 // api.UserModule.login(
 //     {

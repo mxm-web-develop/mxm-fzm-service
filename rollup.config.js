@@ -26,7 +26,6 @@ function createEntry(options){
             extensions
         }),
         commonjs(),
-        
         rollupTypescript({
             tsconfigOverride:{
                 compilerOptions:{

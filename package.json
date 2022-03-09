@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "doc:gen":"",
+    "doc:gen": "",
     "build": "yarn rollup -c"
   },
   "author": "",
@@ -23,7 +23,6 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
     "typedoc": "^0.22.13",
-    "typedoc-plugin-markdown": "^3.11.14",
     "typescript": "^4.5.5",
     "vuepress": "^1.9.7"
   }
