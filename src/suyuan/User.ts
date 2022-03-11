@@ -49,6 +49,7 @@ class User extends Common {
         data
       );
     }
+    
     /**
        * 添加用户接口密钥
        * ```ts

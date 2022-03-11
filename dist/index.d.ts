@@ -5,11 +5,10 @@ interface Coinfg {
     options?: any;
 }
 declare class FZMAPI {
-    Common: Common;
-    Suyuan: Suyuan;
-    Browser: Browser;
-    protected config: Coinfg | undefined;
+    _url: string;
+    _config: Coinfg | undefined;
     constructor(url: string, config?: Coinfg | undefined);
+    SuyuanModlue: () => Suyuan;
 }
 export { Common as commonApi, Suyuan as suyuanApi, Browser as browserApi };
 export default FZMAPI;
